@@ -27,8 +27,16 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Projeto de TCC: SSK Tour"),
-        backgroundColor: Colors.blue,
+        title: Text(
+          "Projeto de TCC: SSK Tour",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.blue[700],
+        elevation: 8,
+        centerTitle: true,
       ),
       body: Container(
         padding: EdgeInsets.all(16),
