@@ -43,19 +43,19 @@ class _HomeState extends State<Home> {
               children: [
                 GestureDetector(
                   onTap: _abrirEmpresa,
-                  child: Image.asset("images/menu_empresa.png"),
+                  child: Image.asset("imagens/quadradoAmarelo.jpg"),
                 ),
                 GestureDetector(
                   onTap: _abrirServico,
-                  child: Image.asset("images/menu_servico.png"),
+                  child: Image.asset("imagens/quadradoAzul.jpg"),
                 ),
                 GestureDetector(
                   onTap: _abrirContato,
-                  child: Image.asset("images/menu_contato.png"),
+                  child: Image.asset("imagens/quadradoRoxo.jpg"),
                 ),
                 GestureDetector(
                   onTap: _abrirCliente,
-                  child: Image.asset("images/menu_cliente.png"),
+                  child: Image.asset("imagens/quadradoVermelho.jpg"),
                 ),
               ],)
             )
