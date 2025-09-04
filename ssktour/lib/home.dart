@@ -12,14 +12,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  void _abrirEquipe() {
+  void _abrirEscola() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => TelaEscola()),
     );
   }
 
-  void _abrirEscola() {
+  void _abrirCurso() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => TelaCurso()),
@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
     Navigator.push(context, MaterialPageRoute(builder: (context) => TelaTCC()));
   }
 
-  void _abrirCurso() {
+  void _abrirEquipe() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => TelaIntegrantes()),
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white54,
       appBar: AppBar(
         title: Text(
-          "SSK TOUR",
+          "Conheça a SSK TOUR, turismo sem barreiras",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.blueAccent,
