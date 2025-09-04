@@ -12,60 +12,89 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  
-  void _abrirEmpresa() => 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => TelaEscola()));
-  void _abrirCliente() => 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => TelaIntegrantes()));
-  void _abrirServico() => 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => TelaTCC()));
-  void _abrirContato() => 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => TelaCurso()));
 
+     void _abrirEquipe(){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaEscola()));
+    }
+
+    void _abrirEscola(){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaCurso()));
+    }
+
+    void _abrirTCC(){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaTCC()));
+    }
+
+    void _abrirCurso(){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaIntegrantes()));
+    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text(
-          "Projeto de TCC: SSK Tour",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: Colors.blue[700],
-        elevation: 8,
-        centerTitle: true,
-      ),
+      backgroundColor: Colors.white54,
+      appBar: AppBar(title: Text("DevLog"), backgroundColor: Colors.deepOrange),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset("images/logo.png"),
-            Padding(padding: EdgeInsets.only(top:32),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  onTap: _abrirEmpresa,
-                  child: Image.asset("imagens/quadradoAmarelo.jpg"),
-                ),
-                GestureDetector(
-                  onTap: _abrirServico,
-                  child: Image.asset("imagens/quadradoAzul.jpg"),
-                ),
-                GestureDetector(
-                  onTap: _abrirContato,
-                  child: Image.asset("imagens/quadradoRoxo.jpg"),
-                ),
-                GestureDetector(
-                  onTap: _abrirCliente,
-                  child: Image.asset("imagens/quadradoVermelho.jpg"),
-                ),
-              ],)
-            )
+            Image.asset("images/DevLog.png", width: 350),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: _abrirEquipe,
+                    child: Column(
+                      children: [
+                        Text("Equipe"),
+                        Image.asset("images/equipe.png", width: 200),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: _abrirEscola,
+                    child: Column(
+                      children: [
+                        Text("Escola"),
+                        Image.asset(
+                          "images/escola.png",
+                          width: 200,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 22),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: _abrirTCC,
+                    child: Column(
+                      children: [
+                        Text("TCC"),
+                        Image.asset("images/TCC.png", width: 200),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: _abrirCurso,
+                    child: Column(
+                      children: [
+                        Text("Curso"),
+                        Image.asset("images/DS.png", width: 200),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
