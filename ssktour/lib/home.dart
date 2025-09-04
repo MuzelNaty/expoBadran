@@ -43,11 +43,14 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white54,
       appBar: AppBar(
         title: Text(
-          "Conheça a SSK TOUR, turismo sem barreiras",
-          style: TextStyle(color: Colors.white),
+          "Conheça a SSK TOUR",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 28,
+          ),
         ),
         backgroundColor: Colors.blueAccent,
-        centerTitle: true,
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -65,7 +68,14 @@ class _HomeState extends State<Home> {
                     onTap: _abrirEquipe,
                     child: Column(
                       children: [
-                        Text("Equipe"),
+                        Text(
+                          "Equipe",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromRGBO(95, 170, 217, 1.0),
+                            fontSize: 24,
+                          ),
+                        ),
                         Image.asset("imagens/integrantes.png", width: 200),
                       ],
                     ),
@@ -74,7 +84,14 @@ class _HomeState extends State<Home> {
                     onTap: _abrirEscola,
                     child: Column(
                       children: [
-                        Text("Escola"),
+                        Text(
+                          "Escola",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromRGBO(95, 170, 217, 1.0),
+                            fontSize: 24,
+                          ),
+                        ),
                         Image.asset("imagens/escola.png", width: 200),
                       ],
                     ),
@@ -91,7 +108,14 @@ class _HomeState extends State<Home> {
                     onTap: _abrirTCC,
                     child: Column(
                       children: [
-                        Text("TCC"),
+                        Text(
+                          "Projeto",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromRGBO(95, 170, 217, 1.0),
+                            fontSize: 24,
+                          ),
+                        ),
                         Image.asset("imagens/tcc.png", width: 200),
                       ],
                     ),
@@ -100,7 +124,14 @@ class _HomeState extends State<Home> {
                     onTap: _abrirCurso,
                     child: Column(
                       children: [
-                        Text("Curso"),
+                        Text(
+                          "Curso",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: const Color.fromRGBO(95, 170, 217, 1.0),
+                            fontSize: 24,
+                          ),
+                        ),
                         Image.asset("imagens/curso.png", width: 200),
                       ],
                     ),
