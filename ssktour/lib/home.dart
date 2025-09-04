@@ -30,7 +30,6 @@ class _HomeState extends State<Home> {
         title: Text(
           "Projeto de TCC: SSK Tour",
           style: TextStyle(
-            fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
         ),
