@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset("images/DevLog.png", width: 350),
+            Image.asset("imagens/logo.png", width: 350),
             Padding(
               padding: EdgeInsets.only(top: 20),
               child: Row(
