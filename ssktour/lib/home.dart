@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
             fontSize: 28,
           ),
         ),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: const Color.fromRGBO(95, 170, 217, 1.0),
       ),
       body: Container(
         padding: EdgeInsets.all(10),
