@@ -12,27 +12,43 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void _abrirEquipe() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaEscola()),
+    );
+  }
 
-     void _abrirEquipe(){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaEscola()));
-    }
+  void _abrirEscola() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaCurso()),
+    );
+  }
 
-    void _abrirEscola(){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaCurso()));
-    }
+  void _abrirTCC() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => TelaTCC()));
+  }
 
-    void _abrirTCC(){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaTCC()));
-    }
+  void _abrirCurso() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaIntegrantes()),
+    );
+  }
 
-    void _abrirCurso(){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>TelaIntegrantes()));
-    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white54,
-      appBar: AppBar(title: Text("DevLog"), backgroundColor: Colors.deepOrange),
+      appBar: AppBar(
+        title: Text(
+          "SSK TOUR",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blueAccent,
+        centerTitle: true,
+      ),
       body: Container(
         padding: EdgeInsets.all(10),
         child: Column(
@@ -50,7 +66,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Text("Equipe"),
-                        Image.asset("images/equipe.png", width: 200),
+                        Image.asset("imagens/integrantes.png", width: 200),
                       ],
                     ),
                   ),
@@ -59,10 +75,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Text("Escola"),
-                        Image.asset(
-                          "images/escola.png",
-                          width: 200,
-                        ),
+                        Image.asset("imagens/escola.png", width: 200),
                       ],
                     ),
                   ),
@@ -79,7 +92,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Text("TCC"),
-                        Image.asset("images/TCC.png", width: 200),
+                        Image.asset("imagens/tcc.png", width: 200),
                       ],
                     ),
                   ),
@@ -88,7 +101,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: [
                         Text("Curso"),
-                        Image.asset("images/DS.png", width: 200),
+                        Image.asset("imagens/curso.png", width: 200),
                       ],
                     ),
                   ),
