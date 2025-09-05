@@ -202,7 +202,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             child: ClipOval(
                               child: Image.asset(
                                 'imagens/erick.jpg',
-                                
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
