@@ -14,7 +14,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
         title: const Text("Integrantes"),
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(95, 170, 217, 1.0),
         foregroundColor: Colors.white,
         elevation: 0,
       ),
@@ -40,7 +40,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -52,7 +52,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromARGB(255, 76, 160, 175), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -64,18 +64,9 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante1.png',
+                                'imagens/antonela.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                               
                               ),
                             ),
                           ),
@@ -85,7 +76,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'João Silva',
+                                  'Antonela Gomes',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -93,22 +84,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Desenvolvedor Full Stack',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Especialista em desenvolvimento web e mobile com 5 anos de experiência em Flutter e React.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                                
                               ],
                             ),
                           ),
@@ -133,7 +109,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -145,7 +121,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -157,18 +133,8 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante2.png',
+                                'imagens/eloise.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
                               ),
                             ),
                           ),
@@ -178,7 +144,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Maria Santos',
+                                  'Eloise Dias',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -186,22 +152,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Designer UX/UI',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Criativa e apaixonada por design, responsável pela experiência do usuário e interface do projeto.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                             
                               ],
                             ),
                           ),
@@ -226,7 +177,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -238,7 +189,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -250,18 +201,8 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante3.png',
-                                fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                                'imagens/erick.jpg',
+                                
                               ),
                             ),
                           ),
@@ -271,7 +212,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Pedro Oliveira',
+                                  'Erick Sebastião',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -279,22 +220,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Analista de Dados',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Especialista em análise de dados e business intelligence, focado em insights estratégicos.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                             
                               ],
                             ),
                           ),
@@ -319,7 +245,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -331,7 +257,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -343,18 +269,9 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante4.png',
+                                'imagens/julia.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                                
                               ),
                             ),
                           ),
@@ -364,7 +281,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Ana Costa',
+                                  'Julia Oliveira',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -372,22 +289,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Gerente de Projeto',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Líder experiente em gestão de projetos, coordenando equipes e garantindo entregas no prazo.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                               
                               ],
                             ),
                           ),
@@ -412,7 +314,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -424,7 +326,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -436,18 +338,9 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante5.png',
+                                'imagens/laura.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                               
                               ),
                             ),
                           ),
@@ -457,7 +350,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Carlos Ferreira',
+                                  'Laura Tiburcio',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -465,22 +358,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Desenvolvedor Backend',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Especialista em APIs e banco de dados, responsável pela arquitetura do sistema.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                                
                               ],
                             ),
                           ),
@@ -505,7 +383,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -517,7 +395,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -529,18 +407,9 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante6.png',
+                                'imagens/maria.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                              
                               ),
                             ),
                           ),
@@ -550,7 +419,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Lucia Rodrigues',
+                                  'Maria Eduarda Soares',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -558,22 +427,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Testadora QA',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Profissional dedicada à qualidade, garantindo que o produto atenda aos mais altos padrões.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                               
                               ],
                             ),
                           ),
@@ -598,7 +452,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -610,7 +464,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -622,18 +476,9 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante7.png',
+                                'imagens/nataly.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                               
                               ),
                             ),
                           ),
@@ -643,7 +488,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Roberto Lima',
+                                  'Nataly Müzel',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -651,22 +496,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'DevOps Engineer',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Responsável pela infraestrutura e deploy automatizado, mantendo o sistema sempre disponível.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                             
                               ],
                             ),
                           ),
@@ -691,7 +521,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, Colors.green[50]!],
+                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
                       ),
                     ),
                     child: Padding(
@@ -703,7 +533,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Colors.green, width: 3),
+                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -715,18 +545,9 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             ),
                             child: ClipOval(
                               child: Image.asset(
-                                'images/integrante8.png',
+                                'imagens/tiago.jpg',
                                 fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    color: Colors.grey[300],
-                                    child: const Icon(
-                                      Icons.person,
-                                      size: 40,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
+                               
                               ),
                             ),
                           ),
@@ -736,7 +557,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'Fernanda Alves',
+                                  'Tiago Mendes',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -744,22 +565,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                Text(
-                                  'Product Owner',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.green[700],
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                const Text(
-                                  'Especialista em produto, definindo prioridades e garantindo que o projeto atenda às necessidades do cliente.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.black54,
-                                  ),
-                                ),
+                               
                               ],
                             ),
                           ),
