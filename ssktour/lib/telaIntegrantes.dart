@@ -97,7 +97,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   'Desenvolvedor Full Stack',
                                   style: TextStyle(
                                     fontSize: 14,
-                                    color: Colors.green[700],
+                                    color: const Color.fromARGB(255, 76, 160, 175), width: 3),
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
