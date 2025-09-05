@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 // Definição das cores personalizadas
 const Color primaryColor = Color(0xFF4E98D9); // #4E98D9
 const Color primaryLight = Color(0xFF5FAAD9); // #5FAAD9
-const Color primaryDark = Color(0xFF0388A6);  // #0388A6
-const Color accentColor = Color(0xFF04BFBF);  // #04BFBF
-const Color accentDark = Color(0xFF03A696);   // #03A696
+const Color primaryDark = Color(0xFF0388A6); // #0388A6
+const Color accentColor = Color(0xFF04BFBF); // #04BFBF
+const Color accentDark = Color(0xFF03A696); // #03A696
 
 class TelaEscola extends StatefulWidget {
   const TelaEscola({super.key});
@@ -72,9 +72,13 @@ class _TelaEscolaState extends State<TelaEscola> {
                           ),
                         ],
                       ),
-                      child: Image.asset(
-                        "images/logo.png",
-                        fit: BoxFit.contain,
+                      child: SizedBox(
+                        width: 1000,
+                        height: 1000,
+                        child: FittedBox(
+                          fit: BoxFit.contain,
+                          child: Image.asset("imagens/etec.png"),
+                        ),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -187,10 +191,7 @@ class _TelaEscolaState extends State<TelaEscola> {
                   const SizedBox(height: 24),
 
                   // Cursos Técnicos
-                  const SectionTitle(
-                    title: "Cursos Técnicos",
-                    fontSize: 18,
-                  ),
+                  const SectionTitle(title: "Cursos Técnicos", fontSize: 18),
                   const SizedBox(height: 8),
                   Wrap(
                     spacing: 10,
@@ -217,14 +218,18 @@ class _TelaEscolaState extends State<TelaEscola> {
                     itemCount: 3,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 14,
-                      crossAxisSpacing: 14,
-                      childAspectRatio: 1,
-                    ),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 14,
+                          crossAxisSpacing: 14,
+                          childAspectRatio: 1,
+                        ),
                     itemBuilder: (context, index) {
                       final imagePaths = [
+                        "imagens/badran.png",
+                        "imagens/badran1.png",
+                        "imagens/badran2.png",
                       ];
                       return _GalleryImage(path: imagePaths[index]);
                     },
@@ -290,10 +295,7 @@ class _InfoCard extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     subtitle,
-                    style: TextStyle(
-                      color: Colors.grey.shade600,
-                      fontSize: 14,
-                    ),
+                    style: TextStyle(color: Colors.grey.shade600, fontSize: 14),
                   ),
                 ],
               ),
