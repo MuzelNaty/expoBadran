@@ -64,7 +64,15 @@ flutter:
   - imagens/integrantes.png
   - imagens/tcc.png
   - imagens/logo.png
-
+  - imagens/antonela.jpg
+  - imagens/julia.jpg
+  - imagens/erick.jpg
+  - imagens/maria.jpg
+  - imagens/nataly.jpg
+  - imagens/eloise.jpg
+  - imagens/tiago.jpg
+  - imagens/laura.jpg
+  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
