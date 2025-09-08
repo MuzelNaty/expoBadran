@@ -240,6 +240,31 @@ class _TelaCursoState extends State<TelaCurso> {
                           ),
                         ),
                       ],
+
+                  // Botão
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue[800],
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 15,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Inscrição realizada com sucesso!'),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Inscreva-se Agora',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white),
                     ),
                   ),
                 ],
