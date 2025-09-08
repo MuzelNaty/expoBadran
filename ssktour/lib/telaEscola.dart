@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-// Definição das cores personalizadas
-const Color primaryColor = Color(0xFF4E98D9); // #4E98D9
-const Color primaryLight = Color(0xFF5FAAD9); // #5FAAD9
-const Color primaryDark = Color(0xFF0388A6); // #0388A6
-const Color accentColor = Color(0xFF04BFBF); // #04BFBF
-const Color accentDark = Color(0xFF03A696); // #03A696
+const Color primaryColor = Color(0xFF4E98D9);
+const Color primaryLight = Color(0xFF5FAAD9);
+const Color primaryDark = Color(0xFF0388A6);
+const Color accentColor = Color(0xFF04BFBF);
+const Color accentDark = Color(0xFF03A696);
 
 class TelaEscola extends StatefulWidget {
   const TelaEscola({super.key});
@@ -20,11 +19,17 @@ class _TelaEscolaState extends State<TelaEscola> {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
-        title: const Text("Etec Pedro Badran"),
-        backgroundColor: primaryColor,
-        elevation: 0,
-        centerTitle: true,
+        title: Text(
+          "Sobre a Escola",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 24,
+          ),
+        ),
+        backgroundColor: const Color.fromRGBO(95, 170, 217, 1.0),
         foregroundColor: Colors.white,
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
@@ -47,10 +52,7 @@ class _TelaEscolaState extends State<TelaEscola> {
                     offset: const Offset(0, 6),
                   ),
                 ],
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(28),
-                  bottomRight: Radius.circular(28),
-                ),
+                // Removido borderRadius para deixar o banner retangular
               ),
               child: SafeArea(
                 child: Column(
