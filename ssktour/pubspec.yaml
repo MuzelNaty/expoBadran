@@ -73,9 +73,6 @@ flutter:
   - imagens/tiago.jpg
   - imagens/laura.jpg
   - imagens/etec.png
-  - imagens/badran.jpeg
-  - imagens/badran2.jpeg
-  - imagens/badran3.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

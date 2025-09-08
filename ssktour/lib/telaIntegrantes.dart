@@ -13,8 +13,15 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text("Integrantes"),
-        backgroundColor: Color.fromRGBO(95, 170, 217, 1.0),
+        title: Text(
+          "Sobre a Equipe",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 24,
+          ),
+        ),
+        backgroundColor: const Color.fromRGBO(95, 170, 217, 1.0),
         foregroundColor: Colors.white,
         elevation: 0,
       ),
@@ -25,8 +32,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 20),
-              
-              // Integrante 1
+
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -40,7 +46,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -52,7 +61,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromARGB(255, 76, 160, 175), width: 3),
+                              border: Border.all(
+                                color: const Color.fromARGB(255, 76, 160, 175),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -66,7 +78,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               child: Image.asset(
                                 'imagens/antonela.jpg',
                                 fit: BoxFit.cover,
-                               
                               ),
                             ),
                           ),
@@ -84,7 +95,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                
+                                const Text(
+                                  'Redator Técnico',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -95,7 +113,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 2
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -109,7 +126,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -121,7 +141,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -152,7 +175,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                             
+                                const Text(
+                                  'Analista de Requisitos',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -163,7 +193,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 3
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -177,7 +206,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -189,7 +221,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -220,7 +255,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                             
+                                const Text(
+                                  'Desenvolvedor Back-end',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -231,7 +273,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 4
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -245,7 +286,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -257,7 +301,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -271,7 +318,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               child: Image.asset(
                                 'imagens/julia.jpg',
                                 fit: BoxFit.cover,
-                                
                               ),
                             ),
                           ),
@@ -289,7 +335,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                               
+                                const Text(
+                                  'Analista de Requisitos',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -300,7 +353,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 5
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -314,7 +366,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -326,7 +381,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -340,7 +398,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               child: Image.asset(
                                 'imagens/laura.jpg',
                                 fit: BoxFit.cover,
-                               
                               ),
                             ),
                           ),
@@ -358,7 +415,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                                
+                                const Text(
+                                  'Documentador',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -369,7 +433,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 6
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -383,7 +446,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -395,7 +461,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -409,7 +478,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               child: Image.asset(
                                 'imagens/maria.jpg',
                                 fit: BoxFit.cover,
-                              
                               ),
                             ),
                           ),
@@ -427,7 +495,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                               
+                                const Text(
+                                  'Analista de Testes',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -438,7 +513,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 7
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -452,7 +526,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -464,7 +541,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -478,7 +558,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               child: Image.asset(
                                 'imagens/nataly.jpg',
                                 fit: BoxFit.cover,
-                               
                               ),
                             ),
                           ),
@@ -496,7 +575,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                             
+                                const Text(
+                                  'Desenvolvedor Front-end',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -507,7 +593,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                 ),
               ),
 
-              // Integrante 8
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Card(
@@ -521,7 +606,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.white, const Color.fromARGB(255, 220, 247, 255)!],
+                        colors: [
+                          Colors.white,
+                          const Color.fromARGB(255, 220, 247, 255)!,
+                        ],
                       ),
                     ),
                     child: Padding(
@@ -533,7 +621,10 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                             height: 80,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: const Color.fromRGBO(95, 170, 217, 1.0), width: 3),
+                              border: Border.all(
+                                color: const Color.fromRGBO(95, 170, 217, 1.0),
+                                width: 3,
+                              ),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
@@ -547,7 +638,6 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                               child: Image.asset(
                                 'imagens/tiago.jpg',
                                 fit: BoxFit.cover,
-                               
                               ),
                             ),
                           ),
@@ -565,7 +655,14 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                                   ),
                                 ),
                                 const SizedBox(height: 4),
-                               
+                                const Text(
+                                  'Documentador',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 72, 72, 72),
+                                    fontStyle: FontStyle.italic,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
