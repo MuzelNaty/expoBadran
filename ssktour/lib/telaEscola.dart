@@ -36,30 +36,45 @@ class _TelaEscolaState extends State<TelaEscola> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Cabeçalho com logo e título
             Container(
-              height: 240,
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [primaryColor, primaryLight],
+                  colors: [
+                    const Color.fromARGB(255, 61, 120, 209),
+                    const Color.fromARGB(255, 61, 120, 209),
+                  ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: primaryDark.withOpacity(0.3),
-                    blurRadius: 12,
-                    offset: const Offset(0, 6),
-                  ),
-                ],
-                // Removido borderRadius para deixar o banner retangular
               ),
-              child: SafeArea(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Logo circular com sombra suave
-                    Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Etec Pedro Badran',
+                          style: TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Excelência em educação e inovação',
+                          style: TextStyle(fontSize: 18, color: Colors.white70),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
                       width: 96,
                       height: 96,
                       padding: const EdgeInsets.all(16),
@@ -83,40 +98,10 @@ class _TelaEscolaState extends State<TelaEscola> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 16),
-                    // Título principal
-                    Text(
-                      "Etec Pedro Badran",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.5,
-                        shadows: const [
-                          Shadow(
-                            blurRadius: 2,
-                            color: Colors.black26,
-                            offset: Offset(0, 1),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    // Subtítulo
-                    Text(
-                      "Excelência em educação e inovação",
-                      style: TextStyle(
-                        color: Colors.white.withOpacity(0.85),
-                        fontStyle: FontStyle.italic,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ),
+                ],
               ),
             ),
-
-            // Conteúdo principal
+                      
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
               child: Column(
