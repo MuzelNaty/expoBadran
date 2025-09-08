@@ -188,31 +188,6 @@ class _TelaEscolaState extends State<TelaEscola> {
                     ],
                   ),
                   const SizedBox(height: 32),
-
-                  // Galeria de imagens
-                  const SectionTitle(title: "Galeria", fontSize: 20),
-                  const SizedBox(height: 16),
-                  GridView.builder(
-                    padding: EdgeInsets.zero,
-                    itemCount: 3,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 14,
-                          crossAxisSpacing: 14,
-                          childAspectRatio: 1,
-                        ),
-                    itemBuilder: (context, index) {
-                      final imagePaths = [
-                        "imagens/badran.png",
-                        "imagens/badran1.png",
-                        "imagens/badran2.png",
-                      ];
-                      return _GalleryImage(path: imagePaths[index]);
-                    },
-                  ),
                 ],
               ),
             ),
