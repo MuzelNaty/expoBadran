@@ -121,7 +121,9 @@ class _TelaCursoState extends State<TelaCurso> {
                     },
                     child: Text(
                       'Inscreva-se Agora',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white),
                     ),
                   ),
                 ],
