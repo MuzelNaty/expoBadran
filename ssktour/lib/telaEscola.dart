@@ -50,7 +50,8 @@ class _TelaEscolaState extends State<TelaEscola> {
                 ),
               ),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment:
+                    CrossAxisAlignment.center,
                 children: [
                   Expanded(
                     flex: 2,
@@ -75,40 +76,35 @@ class _TelaEscolaState extends State<TelaEscola> {
                   ),
                   SizedBox(width: 20),
                   Container(
-                      width: 96,
-                      height: 96,
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
-                            blurRadius: 10,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
-                      ),
-                      child: SizedBox(
-                        width: 1000,
-                        height: 1000,
-                        child: FittedBox(
-                          fit: BoxFit.contain,
-                          child: Image.asset("imagens/etec.png"),
+                    width: 96,
+                    height: 96,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.05),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
                         ),
-                      ),
+                      ],
                     ),
+                    child: FittedBox(
+                      fit: BoxFit.contain,
+                      child: Image.asset("imagens/etec.png"),
+                    ),
+                  ),
                 ],
               ),
             ),
-                      
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Seção Sobre a Escola
-                  const SectionTitle(title: "Sobre a Escola"),
+                  const SectionTitle(title: "Conheça a Escola"),
                   const SizedBox(height: 12),
                   Text(
                     "A Escola Técnica Estadual Pedro Badran, localizada em São Joaquim da Barra, SP, é uma instituição de ensino técnico e médio integrada ao Centro Paula Souza desde 1994. Fundada em 1959, a escola homenageia o imigrante libanês Pedro Badran, que contribuiu para a educação profissionalizante na região.",
@@ -120,19 +116,18 @@ class _TelaEscolaState extends State<TelaEscola> {
                   ),
                   const SizedBox(height: 28),
 
-                  // Cartões de informações principais
                   _InfoCard(
                     icon: Icons.location_on_rounded,
                     title: "Endereço",
                     subtitle: "Rua Maranhão, 1225 - Vila Deienno",
-                    color: accentColor,
+                    color: primaryDark,
                   ),
                   const SizedBox(height: 16),
                   _InfoCard(
                     icon: Icons.call_rounded,
                     title: "Telefone",
                     subtitle: "(16) 3818-2192",
-                    color: accentDark,
+                    color: primaryDark,
                   ),
                   const SizedBox(height: 16),
                   _InfoCard(
@@ -150,16 +145,14 @@ class _TelaEscolaState extends State<TelaEscola> {
                   ),
                   const SizedBox(height: 28),
 
-                  // Cursos e Diferenciais
                   const SectionTitle(
-                    title: "Cursos e Diferenciais",
+                    title: "O que se encontra no Badran?",
                     fontSize: 20,
                   ),
                   const SizedBox(height: 16),
 
-                  // Cursos para Ensino Médio Integrado
                   const SectionTitle(
-                    title: "Cursos para Ensino Médio Integrado",
+                    title: "Cursos com Ensino Médio Integrado",
                     fontSize: 18,
                   ),
                   const SizedBox(height: 8),
@@ -167,17 +160,16 @@ class _TelaEscolaState extends State<TelaEscola> {
                     spacing: 10,
                     runSpacing: 10,
                     children: [
-                      _buildChip("Administração"),
-                      _buildChip("Marketing"),
-                      _buildChip("Desenvolvimento de Sistemas"),
-                      _buildChip("Meio Ambiente"),
+                      _buildChip("Administração (Diurno)"),
+                      _buildChip("Marketing (Diurno)"),
+                      _buildChip("Desenvolvimento de Sistemas (Integral)"),
+                      _buildChip("Meio Ambiente (Integral)"),
                       _buildChip("Eletrônica (Noturno)"),
                       _buildChip("Informática para Internet (Noturno)"),
                     ],
                   ),
                   const SizedBox(height: 24),
 
-                  // Cursos Técnicos
                   const SectionTitle(title: "Cursos Técnicos", fontSize: 18),
                   const SizedBox(height: 8),
                   Wrap(
