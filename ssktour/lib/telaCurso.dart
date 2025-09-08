@@ -240,7 +240,9 @@ class _TelaCursoState extends State<TelaCurso> {
                           ),
                         ),
                       ],
-
+                    )
+                  ),
+                  
                   // Botão
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
