@@ -53,31 +53,13 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
 
   List<Widget> construirLinhas() {
     List<Widget> linhas = [];
-    for (int i = 0; i < pessoas.length; i += 2) {
-      final card1 = construirCard(pessoas[i]);
-      final card2 = (i + 1 < pessoas.length)
-          ? construirCard(pessoas[i + 1])
-          : SizedBox(width: 0);
+    for (int i = 0; i < pessoas.length; i++) {
+      final card = construirCard(pessoas[i]);
       linhas.add(
         Padding(
-          padding: const EdgeInsets.only(bottom: 16),
-          child: Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: card1,
-                ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: card2,
-                ),
-              ),
-            ],
-          ),
-        ),
+        padding: const EdgeInsets.only(bottom: 16),
+        child: card,
+      ),
       );
     }
     return linhas;
@@ -196,7 +178,7 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Curso de Desenvolvimento de Sistemas',
+                          'Equipe de Desenvolvimento da SSK Tour',
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
@@ -205,23 +187,13 @@ class _TelaIntegrantesState extends State<TelaIntegrantes> {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          'Aprenda a criar aplicativos, sites, bancos de dados e muito mais!',
+                          'Saiba mais sobre quem faz parte do time!',
                           style: TextStyle(fontSize: 18, color: Colors.white70),
                         ),
                       ],
                     ),
                   ),
                   SizedBox(width: 20),
-                  Expanded(
-                    flex: 1,
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: Image.network(
-                        'https://cdn-icons-png.flaticon.com/512/1055/1055687.png',
-                        height: 90,
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),

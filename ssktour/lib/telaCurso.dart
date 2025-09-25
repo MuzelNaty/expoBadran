@@ -143,92 +143,81 @@ class _TelaCursoState extends State<TelaCurso> {
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Row(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Grade Curricular',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue[900],
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        ...gradeCurricular.entries.map(
-                          (entry) => Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                entry.key,
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blue[700],
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              ...entry.value.map(
-                                (disciplina) => Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    vertical: 4,
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.check_circle_outline,
-                                        color: Colors.blue,
-                                        size: 20,
-                                      ),
-                                      SizedBox(width: 10),
-                                      Expanded(
-                                        child: Text(
-                                          disciplina,
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            color: Colors.grey[800],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                  // Professores primeiro
+                  Text(
+                    'Professores',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[900],
                     ),
                   ),
-                  SizedBox(width: 40),
+                  SizedBox(height: 10),
+                  ...professores.map(
+                    (professor) => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      child: Row(
+                        children: [
+                          Icon(Icons.person_outline, color: Colors.blue),
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              professor,
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey[800],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
 
-                  Expanded(
-                    child: Column(
+                  SizedBox(height: 30),
+
+                  // Grade Curricular depois
+                  Text(
+                    'Grade Curricular',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[900],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  ...gradeCurricular.entries.map(
+                    (entry) => Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Professores',
+                          entry.key,
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue[900],
+                            color: Colors.blue[700],
                           ),
                         ),
                         SizedBox(height: 10),
-                        ...professores.map(
-                          (professor) => Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4),
+                        ...entry.value.map(
+                          (disciplina) => Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 4,
+                            ),
                             child: Row(
                               children: [
-                                Icon(Icons.person_outline, color: Colors.blue),
+                                Icon(
+                                  Icons.check_circle_outline,
+                                  color: Colors.blue,
+                                  size: 20,
+                                ),
                                 SizedBox(width: 10),
                                 Expanded(
                                   child: Text(
-                                    professor,
+                                    disciplina,
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.grey[800],
@@ -240,36 +229,12 @@ class _TelaCursoState extends State<TelaCurso> {
                           ),
                         ),
                       ],
-
-                  // Botão
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue[800],
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 40,
-                        vertical: 15,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                    onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('Inscrição realizada com sucesso!'),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Inscreva-se Agora',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white),
                     ),
                   ),
                 ],
               ),
             ),
+
             SizedBox(height: 30),
           ],
         ),

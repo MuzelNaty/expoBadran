@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-// Definição das cores personalizadas
-const Color primaryColor = Color(0xFF4E98D9); // #4E98D9
-const Color primaryLight = Color(0xFF5FAAD9); // #5FAAD9
-const Color primaryDark = Color(0xFF0388A6); // #0388A6
-const Color accentColor = Color(0xFF04BFBF); // #04BFBF
-const Color accentDark = Color(0xFF03A696); // #03A696
+const Color primaryColor = Color(0xFF4E98D9);
+const Color primaryLight = Color(0xFF5FAAD9);
+const Color primaryDark = Color(0xFF0388A6);
+const Color accentColor = Color(0xFF04BFBF);
+const Color accentDark = Color(0xFF03A696);
 
 class TelaTCC extends StatefulWidget {
   const TelaTCC({super.key});
@@ -20,103 +19,90 @@ class _TelaTCCState extends State<TelaTCC> {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
-        title: const Text("SSK Tour"),
-        backgroundColor: primaryColor,
-        elevation: 0,
-        centerTitle: true,
+        title: Text(
+          "SSK Tour",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 24,
+          ),
+        ),
+        backgroundColor: const Color.fromRGBO(95, 170, 217, 1.0),
         foregroundColor: Colors.white,
+        elevation: 0,
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Cabeçalho com logo e título
             Container(
-              height: 240,
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [primaryColor, primaryLight],
+                  colors: [
+                    const Color.fromARGB(255, 61, 120, 209),
+                    const Color.fromARGB(255, 61, 120, 209),
+                  ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: primaryDark.withOpacity(0.3),
-                    blurRadius: 12,
-                    offset: const Offset(0, 6),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'SSK Tour',
+                          style: TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Turismo sem barreiras',
+                          style: TextStyle(fontSize: 18, color: Colors.white70),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 96,
+                    height: 96,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.05),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: FittedBox(
+                      fit: BoxFit.contain,
+                      child: Image.asset("imagens/logo.png"),
+                    ),
                   ),
                 ],
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(28),
-                  bottomRight: Radius.circular(28),
-                ),
-              ),
-              child: SafeArea(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Logo circular com sombra suave
-                    Container(
-                      width: 96,
-                      height: 96,
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
-                            blurRadius: 10,
-                            offset: const Offset(0, 4),
-                          ),
-                        ],
-                      ),
-                      child: FittedBox(
-                        fit: BoxFit.contain,
-                        child: Image.asset("imagens/logo.png"),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    // Título principal
-                    Text(
-                      "SSK Tour",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.5,
-                        shadows: const [
-                          Shadow(
-                            blurRadius: 2,
-                            color: Colors.black26,
-                            offset: Offset(0, 1),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    // Subtítulo
-                    Text(
-                      "Turismo sem barreiras",
-                      style: TextStyle(
-                        color: Colors.white.withOpacity(0.85),
-                        fontStyle: FontStyle.italic,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ),
               ),
             ),
 
-            // Conteúdo principal
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Sobre o TCC
                   const SectionTitle(title: "Sobre o TCC"),
                   const SizedBox(height: 12),
                   Text(
@@ -128,55 +114,65 @@ class _TelaTCCState extends State<TelaTCC> {
                     ),
                   ),
                   const SizedBox(height: 28),
-                
 
-                  // Funcionalidades
                   const SectionTitle(title: "Funcionalidades"),
                   const SizedBox(height: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       _FeatureItem(
-                        text: "Permite pesquisar hotéis e resorts acessíveis no estado de São Paulo.",
+                        text:
+                            "Permite pesquisar hotéis e resorts acessíveis no estado de São Paulo.",
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
-                        text: "Exibe informações detalhadas sobre a acessibilidade dos locais, como quartos adaptados e serviços inclusivos.",
+                        text:
+                            "Exibe informações detalhadas sobre a acessibilidade dos locais, como quartos adaptados e serviços inclusivos.",
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
-                        text: "Oferece links para redirecionar o usuário ao site oficial para reservas.",
+                        text:
+                            "Oferece links para redirecionar o usuário ao site oficial para reservas.",
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
-                        text: "Permite cadastro de usuários, salvamento de preferências e histórico de buscas.",
+                        text:
+                            "Permite cadastro de usuários, salvamento de preferências e histórico de buscas.",
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
-                        text: "Suporta formatos acessíveis, como leitores de tela, descrições em imagens e alto contraste.",
+                        text:
+                            "Suporta formatos acessíveis, como leitores de tela, descrições em imagens e alto contraste.",
                       ),
                     ],
                   ),
 
                   const SizedBox(height: 28),
 
-                  // Tecnologias Usadas
                   const SectionTitle(title: "Tecnologias Usadas"),
                   const SizedBox(height: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      _FeatureItemRich(label: "Frontend", description: "HTML, CSS e JavaScript"),
+                      _FeatureItemRich(
+                        label: "Frontend",
+                        description: "HTML, CSS e JavaScript",
+                      ),
                       SizedBox(height: 12),
-                      _FeatureItemRich(label: "Backend", description: "PHP (em desenvolvimento)"),
+                      _FeatureItemRich(
+                        label: "Backend",
+                        description: "PHP (em desenvolvimento)",
+                      ),
                       SizedBox(height: 12),
-                      _FeatureItemRich(label: "Banco de Dados", description: "SQL"),
+                      _FeatureItemRich(
+                        label: "Banco de Dados",
+                        description: "SQL",
+                      ),
                     ],
                   ),
 
                   const SizedBox(height: 28),
 
-                  // Sobre o TCC
                   const SectionTitle(title: "Motivação para o projeto"),
                   const SizedBox(height: 12),
                   Text(
@@ -187,8 +183,6 @@ class _TelaTCCState extends State<TelaTCC> {
                       fontSize: 16,
                     ),
                   ),
-
-                  
                 ],
               ),
             ),
@@ -199,7 +193,6 @@ class _TelaTCCState extends State<TelaTCC> {
   }
 }
 
-// Título de seção reutilizável
 class SectionTitle extends StatelessWidget {
   final String title;
   final double fontSize;
@@ -220,11 +213,10 @@ class SectionTitle extends StatelessWidget {
   }
 }
 
-// Item de lista simples
 class _FeatureItem extends StatelessWidget {
   final String text;
 
-  const _FeatureItem({super.key, required this.text});
+  const _FeatureItem({required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -233,11 +225,7 @@ class _FeatureItem extends StatelessWidget {
       children: [
         const Text(
           "• ",
-          style: TextStyle(
-            fontSize: 20,
-            height: 1.5,
-            color: primaryDark,
-          ),
+          style: TextStyle(fontSize: 20, height: 1.5, color: primaryDark),
         ),
         Expanded(
           child: Text(
@@ -254,13 +242,11 @@ class _FeatureItem extends StatelessWidget {
   }
 }
 
-// Item de lista com label em negrito e cor azul
 class _FeatureItemRich extends StatelessWidget {
   final String label;
   final String description;
 
   const _FeatureItemRich({
-    super.key,
     required this.label,
     required this.description,
   });
@@ -272,11 +258,7 @@ class _FeatureItemRich extends StatelessWidget {
       children: [
         const Text(
           "• ",
-          style: TextStyle(
-            fontSize: 20,
-            height: 1.5,
-            color: primaryDark,
-          ),
+          style: TextStyle(fontSize: 20, height: 1.5, color: primaryDark),
         ),
         Expanded(
           child: RichText(
