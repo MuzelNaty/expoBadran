@@ -127,6 +127,14 @@ class _TelaTCCState extends State<TelaTCC> {
                       fontSize: 16,
                     ),
                   ),
+                  Text(
+                    "Nosso site tem filtros disponíveis na tela inicial para facilitar a navegação para pessoas com deficiência visual",
+                    style: TextStyle(
+                      height: 1.6,
+                      color: Colors.grey.shade800,
+                      fontSize: 16,
+                    ),
+                  ),
                   const SizedBox(height: 28),
                 
 
@@ -141,15 +149,11 @@ class _TelaTCCState extends State<TelaTCC> {
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
-                        text: "Exibe informações detalhadas sobre a acessibilidade dos locais, como quartos adaptados e serviços inclusivos.",
+                        text: "Exibe informações sobre a acessibilidade dos locais, como quartos adaptados e serviços inclusivos.",
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
                         text: "Oferece links para redirecionar o usuário ao site oficial para reservas.",
-                      ),
-                      SizedBox(height: 12),
-                      _FeatureItem(
-                        text: "Permite cadastro de usuários, salvamento de preferências e histórico de buscas.",
                       ),
                       SizedBox(height: 12),
                       _FeatureItem(
