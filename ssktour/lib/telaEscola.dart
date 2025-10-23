@@ -205,7 +205,6 @@ class _InfoCard extends StatelessWidget {
   final Color color;
 
   const _InfoCard({
-    super.key,
     required this.icon,
     required this.title,
     required this.subtitle,
@@ -274,10 +273,11 @@ Widget _buildChip(String text) {
   );
 }
 
+// ignore: unused_element
 class _GalleryImage extends StatelessWidget {
   final String path;
 
-  const _GalleryImage({super.key, required this.path});
+  const _GalleryImage({required this.path});
 
   @override
   Widget build(BuildContext context) {

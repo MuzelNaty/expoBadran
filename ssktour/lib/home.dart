@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ssktour/telaCurso.dart';
 import 'package:ssktour/telaEscola.dart';
 import 'package:ssktour/telaIntegrantes.dart';
-import 'package:ssktour/telaTcc.dart';
+import 'package:ssktour/telaTCC.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -43,14 +43,15 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "Conheça a SSK TOUR",
+          "Conheça mais sobre a",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontSize: 28,
+            fontSize: 25,
           ),
         ),
         backgroundColor: const Color.fromRGBO(95, 170, 217, 1.0),
+        centerTitle: true,
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -66,34 +67,42 @@ class _HomeState extends State<Home> {
                 children: [
                   GestureDetector(
                     onTap: _abrirEquipe,
-                    child: Column(
-                      children: [
-                        Text(
-                          "Equipe",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromRGBO(95, 170, 217, 1.0),
-                            fontSize: 24,
+                    child: SizedBox(
+                      width: 150,  // largura total do botão
+                      height: 240, // altura total do botão
+                      child: Column(
+                        children: [
+                          Text(
+                            "Equipe",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromRGBO(95, 170, 217, 1.0),
+                              fontSize: 24,
+                            ),
                           ),
-                        ),
-                        Image.asset("imagens/integrantes.png", width: 200),
-                      ],
+                          Image.asset("imagens/integrantes.png", width: 200),
+                        ],
+                      ),
                     ),
                   ),
                   GestureDetector(
                     onTap: _abrirEscola,
-                    child: Column(
-                      children: [
-                        Text(
-                          "Escola",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromRGBO(95, 170, 217, 1.0),
-                            fontSize: 24,
+                    child: SizedBox(
+                      width: 150,  // largura total do botão
+                      height: 240, // altura total do botão
+                      child: Column(
+                        children: [
+                          Text(
+                            "Escola",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromRGBO(95, 170, 217, 1.0),
+                              fontSize: 24,
+                            ),
                           ),
-                        ),
-                        Image.asset("imagens/escola.png", width: 200),
-                      ],
+                          Image.asset("imagens/escola.png", width: 200),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -106,34 +115,42 @@ class _HomeState extends State<Home> {
                 children: [
                   GestureDetector(
                     onTap: _abrirTCC,
-                    child: Column(
-                      children: [
-                        Text(
-                          "Projeto",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromRGBO(95, 170, 217, 1.0),
-                            fontSize: 24,
+                    child: SizedBox(
+                      width: 150,  // largura total do botão
+                      height: 190, // altura total do botão
+                      child: Column(
+                        children: [
+                          Text(
+                            "Projeto",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromRGBO(95, 170, 217, 1.0),
+                              fontSize: 24,
+                            ),
                           ),
-                        ),
-                        Image.asset("imagens/tcc.png", width: 200),
-                      ],
+                          Image.asset("imagens/tcc.png", width: 200),
+                        ],
+                      ),
                     ),
                   ),
                   GestureDetector(
                     onTap: _abrirCurso,
-                    child: Column(
-                      children: [
-                        Text(
-                          "Curso",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: const Color.fromRGBO(95, 170, 217, 1.0),
-                            fontSize: 24,
+                    child: SizedBox(
+                      width: 150,  // largura total do botão
+                      height: 190, // altura total do botão
+                      child: Column(
+                        children: [
+                          Text(
+                            "Curso",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromRGBO(95, 170, 217, 1.0),
+                              fontSize: 24,
+                            ),
                           ),
-                        ),
-                        Image.asset("imagens/curso.png", width: 200),
-                      ],
+                          Image.asset("imagens/curso.png", width: 200),
+                        ],
+                      ),
                     ),
                   ),
                 ],
